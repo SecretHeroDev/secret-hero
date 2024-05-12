@@ -37,6 +37,10 @@ SecretHero().initialize(secretHeroConfig, secretHeroListener)
 SecretHeroConfig(
       token: "your_token",
       userId: "user_id",
+      country: "country",
+      language: "language",
+      iconImage: iconImage,
+      isLayoutLTR: isLayoutLTR,
       displayName: "display_name",
       theme: SecretHeroTheme(
         primaryColor: "#191D21",
@@ -51,7 +55,15 @@ SecretHero.initialize(config: config, delegate: self)
 * `token`: A token required for authentication and interaction with the SecretHero SDK.
 * `userId`: Represents the user ID associated with the SecretHero session.
 * `displayName`: An display name for the user within the SecretHero environment.
-* `theme`: SecretHeroTheme class encapsulates various visual attributes, allowing customization of the platform's appearance
+* `language`: An optional string indicating the preferred language setting.
+* `country`: An optional string indicating the preferred country setting.
+* `iconImage`: An optional String representing the file path name of application image.
+* `isLayoutLTR`: An optional boolean value indicating the layout direction.
+
+* `primaryColor`: An integer value representing the primary color used in the sdk's interface or visual elements (text color).
+* `secondaryColor`: An integer value representing the primary color used in the sdk's interface or visual elements (background color).
+* `highlightColor` : An integer value representing the color used to highlight specific elements or actions within the sdk's interface
+* `buttonColor` : An integer value specifying the color utilized for buttons or interactive elements within the sdk's interface
 
 3. The `SecretHeroEventListener` delegate serves as a callback mechanism within the SecretHero SDK, providing methods to handle various events and responses during the SDK's lifecycle and operations.
 
