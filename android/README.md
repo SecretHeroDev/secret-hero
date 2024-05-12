@@ -64,7 +64,7 @@ SecretHeroTheme.Builder()
                 .setSecondaryColor(secondaryColor)
                 .setHighlightColor(highlightColor)
                 .setButtonColor(buttonColor)
-                .build(token)
+                .build()
 ```
 
 * `primaryColor`: An integer value representing the primary color used in the sdk's interface or visual elements (text color).
