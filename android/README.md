@@ -41,13 +41,37 @@ SecretHero.initialize(config: config, listener: listener)
 ```kotlin
 SecretHeroConfig.Builder()
                 .setUserId(userId)
+                .setTheme(theme)
+                .setLanguage(language)
+                .setCountry(country)
                 .setDisplayName(displayName)
+                .setIconImage(image)
+                .isLayoutLTR(boolean)
                 .build(token)
 ```
 
 * `token`: A token required for authentication and interaction with the SecretHero SDK.
 * `userId`: Represents the user ID associated with the SecretHero session.
 * `displayName`: An display name for the user within the SecretHero environment.
+* `language`: An optional string indicating the preferred language setting.
+* `country`: An optional string indicating the preferred country setting.
+* `iconImage`: An optional Drawable object representing the application.
+* `isLayoutLTR`: An optional boolean value indicating the layout direction.
+
+```kotlin
+SecretHeroTheme.Builder()
+                .setPrimaryColor(primaryColor)
+                .setSecondaryColor(secondaryColor)
+                .setHighlightColor(highlightColor)
+                .setButtonColor(buttonColor)
+                .build(token)
+```
+
+* `primaryColor`: An integer value representing the primary color used in the sdk's interface or visual elements (text color).
+* `secondaryColor`: An integer value representing the primary color used in the sdk's interface or visual elements (background color).
+* `highlightColor` : An integer value representing the color used to highlight specific elements or actions within the sdk's interface
+* `buttonColor` : An integer value specifying the color utilized for buttons or interactive elements within the sdk's interface
+
 
 3. The SecretHeroListener interface serves as a callback mechanism within the SecretHero SDK, providing methods to handle various events and responses during the SDK's lifecycle and operations.
 
