@@ -9,7 +9,7 @@ Secret Hero is a sdk designed to add gaming functionalities into your applicatio
 To integrate the SecretHero library into your project, add the following dependency in your app's build.gradle file:
 
 ```gradle
-implementation 'com.secrethero.secrethero:secrethero:<latest-version>'
+implementation 'io.secrethero.secrethero:secrethero:<latest-version>'
 ```
 
 ## Setup
