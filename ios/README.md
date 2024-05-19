@@ -65,13 +65,13 @@ SecretHero.initialize(config: config, delegate: self)
 * `iconImage`: An optional Drawable object representing the application.
 * `isLayoutLTR`: An optional boolean value indicating the layout direction.
 
-```kotlin
+```swift
 SecretHeroTheme.Builder()
-                .setPrimaryColor(primaryColor)
-                .setSecondaryColor(secondaryColor)
-                .setHighlightColor(highlightColor)
-                .setButtonColor(buttonColor)
-                .build(token)
+    .setPrimaryColor(primaryColor)
+    .setSecondaryColor(secondaryColor)
+    .setHighlightColor(highlightColor)
+    .setButtonColor(buttonColor)
+    .build(token)
 ```
 
 * `primaryColor`: An integer value representing the primary color used in the sdk's interface or visual elements (text color).
@@ -98,6 +98,10 @@ extension ViewController: SecretHeroDelegate {
     func onOpen() {
 
     }
+
+    func onEvent(event: SecretHeroEvent, extras: [String: String]?) {
+
+    }	  
 }
 ```
 
@@ -105,5 +109,6 @@ extension ViewController: SecretHeroDelegate {
 * `onInitializeFailed(errorMessage: String)` : Triggered upon initialization failure in the SecretHero SDK
 * `onClose()` : Called when the SecretHero session is closed or terminated
 * `onOpen()` : Executed when the SecretHero session is opened or activated
+* `onEvent(event: SecretHeroEvent, extras: [String: String]?)` : Called when an event is triggered. Extra information for event are gameName, gameDuration and gameCoupon.
 
 4. The `release()` function within the SecretHero serves the purpose of releasing and resetting configuration and delegates associated with the SecretHero. Need to be called `deinit`
