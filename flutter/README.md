@@ -81,7 +81,7 @@ final secretHeroListener = SecretHeroEventListener(
   onClose: () {
     print("onClose");
   }, 
-  onEvent: (event) {
+  onEvent: (event, extras) {
     print("onEvent $event");
   });
 ```
@@ -90,7 +90,7 @@ final secretHeroListener = SecretHeroEventListener(
 * `onInitializeFailed(errorMessage: String)` : Triggered upon initialization failure in the SecretHero SDK
 * `onClose()` : Called when the SecretHero session is closed or terminated
 * `onOpen()` : Executed when the SecretHero session is opened or activated
-* `onEvent()` : Executed when the SecretHeroEvent is accrued
+* `onEvent()` : The onEvent function is a callback that handles specific game events and their associated data. Event (String) represents the type of event that occurred. It can have one of the following values: "GAME_SUCCESS", "GAME_FAILED", "GAME_CLICKED", "COUPON_COPIED", "GAME_STARTED". Extras (Map<String, String?>) a map containing additional details about the event. Possible keys include: "gameName", "gameDuration", "gameCoupon"
 
 
 4. `The release()` function within the SecretHero serves the purpose of releasing and resetting configuration and listeners associated with the SecretHero. Need to be called onDestroy
