@@ -18,6 +18,7 @@ export default function App() {
                 country: "tr",
                 language: "tr",
                 isLayoutLTR: true ,
+                iconImage: "test",
                 theme: {
                     primaryColor: "#191D21",
                     secondaryColor: "#FFFFFF",
