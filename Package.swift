@@ -26,7 +26,7 @@ let package = Package(
             dependencies: [
                 .target(name: "SecretHero"),
             ],
-            path: "Sources"
+            path: "ios/Sources"
         ),
         .binaryTarget(
             name: "SecretHero",
